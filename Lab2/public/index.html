@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Агентство недвижимости — Новости</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Агентство недвижимости</h1>
+    <nav>
+      <button id="nav-list" class="active">Все новости</button>
+      <button id="nav-add">Добавить новость</button>
+      <!-- <a href="/api-docs" target="_blank"><button>Swagger UI</button></a> -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- Секция списка -->
+    <section id="section-list">
+      <h2>Список новостей</h2>
+      <div id="news-container"></div>
+    </section>
+
+    <!-- Секция добавления -->
+    <section id="section-add" class="hidden">
+      <h2>Добавить новость</h2>
+      <form id="form-add">
+        <label>Заголовок <input type="text" id="add-title" required /></label>
+        <label>Автор <input type="text" id="add-author" required /></label>
+        <label>Содержание <textarea id="add-content" rows="5" required></textarea></label>
+        <button type="submit">Сохранить</button>
+      </form>
+      <p id="add-message"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
